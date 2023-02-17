@@ -12,10 +12,10 @@
 
 int main(void)
 {
-char start = 48;
-char end = 57;
-char comma = 44;
-char space = 32;
+int start = 48;
+int end = 57;
+int comma = 44;
+int space = 32;
 while (start <= end)
 {
 	putchar(start);
