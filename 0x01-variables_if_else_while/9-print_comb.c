@@ -19,8 +19,11 @@ int space = 32;
 while (start <= end)
 {
 	putchar(start);
-	putchar(comma);
-	putchar(space);
+	if (start != 57)
+	{
+		putchar(comma);
+		putchar(space);
+	}
 	start++;
 }
 putchar('\n');
