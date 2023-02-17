@@ -14,9 +14,11 @@ int main(void)
 {
 int space = 32;
 int comma = 44;
-for (int i = 48; i < 57; i++)
+int i = 0;
+int j = 0;
+for (i = 48; i < 57; i++)
 {
-	for (int j = i + 1; j <= 57; j++)
+	for (j = i + 1; j <= 57; j++)
 	{
 		putchar(i);
 		putchar(j);
