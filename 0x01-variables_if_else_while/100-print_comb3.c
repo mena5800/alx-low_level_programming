@@ -26,8 +26,8 @@ for (i = 48; i < 57; i++)
 		{
 			break;
 		}
-		putchar(space);
 		putchar(comma);
+		putchar(space);
 	}
 }
 putchar('\n');
