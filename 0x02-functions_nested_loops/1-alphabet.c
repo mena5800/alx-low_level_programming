@@ -1,6 +1,6 @@
 /*
  * auth: mina safwat samy
- * file: i-putchar.c
+ * file: 1-alphabet.c
  */
 
 #include "main.h"
@@ -19,4 +19,4 @@ void print_alphabet(void)
 		_putchar(i);
 	}
 	_putchar('\n');
-{
+}
