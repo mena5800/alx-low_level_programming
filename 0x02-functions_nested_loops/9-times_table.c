@@ -20,6 +20,10 @@ void times_table(void)
 	{
 		for (i = 0; i < 9; i++)
 		{
+			if (i * j < 10 && j != 0)
+			{
+				printf(' ');
+			}
 			printf("%d, ", i * j);
 		}
 		printf("%d\n", i * j);
