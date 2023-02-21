@@ -26,6 +26,10 @@ void times_table(void)
 			}
 			printf("%d, ", i * j);
 		}
+		if (i * j < 10)
+		{
+			putchar(' ');
+		}
 		printf("%d\n", i * j);
 	}
 }
