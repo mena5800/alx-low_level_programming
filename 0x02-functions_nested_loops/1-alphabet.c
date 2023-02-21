@@ -1,6 +1,6 @@
 /*
  * auth: mina safwat samy
- * file: 0-putchar.c
+ * file: i-putchar.c
  */
 
 #include "main.h"
