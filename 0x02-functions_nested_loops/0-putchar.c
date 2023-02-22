@@ -3,16 +3,21 @@
  * file: 0-putchar.c
  */
 
-#include<stdio.h>
-#include<main.h>
+#include "main.h"
 
 /**
  * main - prints _putchar, followed by a new line.
- * return: always (0)
+ * Return: always (0)
  */
 
 int main(void)
 {
-	_putchar();
+	char *word = "_putchar\n";
+
+	while (*word)
+	{
+		_putchar(*word);
+		word++;
+	}
 	return (0);
 {

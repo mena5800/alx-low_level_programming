@@ -3,7 +3,6 @@
  * file: 7-print_last_digit.c
  */
 
-#include <stdio.h>
 #include "main.h"
 
 /**
@@ -14,6 +13,12 @@
 
 int print_last_digit(int n)
 {
-	printf("%d", n % 10);
-	return (n % 10);
+	int num = n % 10;
+
+	if (num < 0)
+	{
+		num = num * -1;
+	}
+	_putchar(num + '0');
+	return (num);
 }
