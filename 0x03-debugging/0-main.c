@@ -4,12 +4,12 @@
 #include "main.h"
 /* betty style doc for function main goes there */
 /**
- * main - print whether the number stored in the variable
- * n is positive or negative.
+ * positive_or_negative - print whether the number stored in the variable
+ * @n: is positive or negative number.
  * Return: always 0
  */
 
-void positive_or_negative(int i)
+void positive_or_negative(int n)
 {
 	int n;
 
