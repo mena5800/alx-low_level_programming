@@ -25,11 +25,11 @@ void jack_bauer(void)
 			{
 				printf("0%d:0%d\n", i, j);
 			}
-			else if (j > 10 && i < 10)
+			else if (j >= 10 && i < 10)
 			{
 				printf("0%d:%d\n", i, j);
 			}
-			else if (j < 10 && i > 10)
+			else if (j < 10 && i >= 10)
 			{
 				printf("%d:0%d\n", i, j);
 			}
