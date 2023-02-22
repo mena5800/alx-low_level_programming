@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-#include<stdio.h>
+#include "main.h"
 /* betty style doc for function main goes there */
 /**
  * main - print whether the number stored in the variable
@@ -9,7 +9,7 @@
  * Return: always 0
  */
 
-int main(void)
+void positive_or_negative(int i)
 {
 	int n;
 
