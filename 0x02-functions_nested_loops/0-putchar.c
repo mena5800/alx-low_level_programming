@@ -20,4 +20,4 @@ int main(void)
 		word++;
 	}
 	return (0);
-{
+}
