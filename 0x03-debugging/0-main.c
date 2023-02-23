@@ -1,26 +1,27 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-#include "main.h"
+#include<stdio.h>
+#include"main.h"
 /* betty style doc for function main goes there */
 /**
- * positive_or_negative - print whether the number stored in the variable
- * @n: is positive or negative number.
+ * main - print whether the number stored in the variable
+ * i is positive or negative.
  * Return: always 0
  */
 
-void positive_or_negative(int n)
+void positive_or_negative(int i)
 {
-	int n;
+	int i;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	if (n > 0)
-		printf("%d is positive\n", n);
-	else if (n == 0)
-		printf("%d is zero\n", n);
+	if (i > 0)
+		printf("%d is positive\n", i);
+	else if (i == 0)
+		printf("%d is zero\n", i);
 	else
-		printf("%d is negative\n", n);
+		printf("%d is negative\n", i);
 	return (0);
 }
