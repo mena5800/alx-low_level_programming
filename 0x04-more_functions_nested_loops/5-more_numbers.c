@@ -35,7 +35,7 @@ void more_numbers(void)
 			_putchar(i);
 			if (i == 57)
 			{
-				i = 48;
+				i = 47;
 				end = 52;
 				flag = 1;
 			}
