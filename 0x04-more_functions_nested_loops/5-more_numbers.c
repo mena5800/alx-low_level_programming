@@ -26,7 +26,7 @@ void more_numbers(void)
 		i = 48;
 		end = 57;
 
-		for (i; i <= end; i++)
+		for (i = i; i <= end; i++)
 		{
 			if (flag)
 			{
