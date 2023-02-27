@@ -14,22 +14,30 @@
 
 void print_rev(char *s)
 {
-	char *m = s;
-
-	while (*m != '\0')
+	if (*s == '\0')
 	{
-		m++;
+		_putchar('\n');
 	}
-
-	m--;
-
-	while (m != s)
+	else
 	{
-		_putchar(*m);
+
+		char *m = s;
+
+		while (*m != '\0')
+		{
+			m++;
+		}
+
 		m--;
-	}
 
-	_putchar(*s);
-	_putchar('\n');
+		while (m != s)
+		{
+			_putchar(*m);
+			m--;
+		}
+
+		_putchar(*s);
+		_putchar('\n');
+	}
 
 }
