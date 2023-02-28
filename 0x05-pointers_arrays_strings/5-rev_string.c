@@ -1,43 +1,45 @@
 /*
  * auth: Mina Safwat
- * file: 4-print_rev.c
+ * file: 4-rev_string.c
  */
 
 #include "main.h"
 
 /**
- * print_rev - prints a string, in reverse, followed by
- * a new line.
+ * rev_string - reverse a string.
  * @s: string.
  * Return: void.
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	if (*s == '\0')
 	{
-		_putchar('\n');
+		return;
 	}
 	else
 	{
 
 		char *m = s;
+		char *z = s;
+		char temp = '0';
 
 		while (*m != '\0')
 		{
 			m++;
 		}
-
 		m--;
 
-		while (m != s)
+		while (m > z)
 		{
-			_putchar(*m);
+			temp = *m;
+			*m = *z;
+			*z = temp;
 			m--;
+			z++;
+
 		}
 
-		_putchar(*s);
-		_putchar('\n');
 	}
 
 }

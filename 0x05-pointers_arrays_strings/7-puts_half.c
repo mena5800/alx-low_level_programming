@@ -27,7 +27,7 @@ void puts_half(char *str)
 	if (counter % 2 == 0)
 		steps = counter / 2;
 	else
-		steps = (counter - 1) / 2;
+		steps = (counter + 1) / 2;
 
 	m = str;
 
