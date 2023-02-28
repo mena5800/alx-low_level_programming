@@ -24,7 +24,11 @@ void puts_half(char *str)
 		m++;
 	}
 
-	steps = counter / 2;
+	if (counter % 2 == 0)
+		steps = counter / 2;
+	else
+		steps = (counter - 1) / 2;
+
 	m = str;
 
 	for (i = 0; i < steps; i++)

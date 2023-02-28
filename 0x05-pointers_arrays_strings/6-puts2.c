@@ -19,7 +19,7 @@ void puts2(char *str)
 	{
 		_putchar(*m);
 		m++;
-		if (*m == '\0)
+		if (*m == '\0')
 		{
 			break;
 		}
