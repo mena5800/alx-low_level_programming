@@ -16,22 +16,17 @@ void print_array(int *a, int n)
 {
 	int *m = a;
 	int i;
-	int *z = a;
-	int counter = 0;
 
-	while (*z != '\0')
+	if (n < 1)
 	{
-		counter++;
-		z++;
+		printf("\n");
+		return;
 	}
 
-	if (counter == n)
+	for (i = 0; i < n - 1; i++)
 	{
-		for (i = 0; i < n - 1; i++)
-		{
-			printf("%d, ", *m);
-			m++;
-		}
+		printf("%d, ", *m);
+		m++;
 	}
 
 	printf("%d\n", *m);
