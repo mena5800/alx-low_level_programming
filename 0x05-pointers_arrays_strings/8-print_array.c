@@ -16,12 +16,24 @@ void print_array(int *a, int n)
 {
 	int *m = a;
 	int i;
+	int *z = a;
+	int counter = 0;
 
-	for (i = 0; i < n - 1; i++)
+	while (*z != '\0')
 	{
-		printf("%d, ", *m);
-		m++;
+		counter++;
+		z++;
 	}
+
+	if (counter == n)
+	{
+		for (i = 0; i < n - 1; i++)
+		{
+			printf("%d, ", *m);
+			m++;
+		}
+	}
+
 	printf("%d\n", *m);
 
 }
