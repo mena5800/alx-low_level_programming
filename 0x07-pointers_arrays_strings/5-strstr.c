@@ -26,7 +26,7 @@ char *_strstr(char *haystack, char *needle)
 		counter2++;
 		temp2++;
 	}
-
+	temp2 = needle;
 	while (*temp1 != '\0')
 	{
 		if (*temp1 == *temp2)
