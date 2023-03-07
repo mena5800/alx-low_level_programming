@@ -1,10 +1,4 @@
-/*
- * auth: mina safwat samy
- * file: 3-strspn.c
- */
-
 #include "main.h"
-
 /**
  * _strspn - gets the length of a prefix substring.
  * @s: pointer.
@@ -16,28 +10,40 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	int counter = 0;
-	char *m = s;
+	int counter_temp = 0;
+	int counter1 = 0;
+	int counter2 = 0;
+	char *temp1 = s;
+	char *temp2 = accept;
 	int i = 0;
+	int j = 0;
 
-	while (*m != '\0')
+	while (*temp1 != '\0')
 	{
-		counter += 1;
-		m += 1;
+		counter1 += 1;
+		temp1 += 1;
 	}
-
-	while (*s != c && i < counter)
+	temp1 = s;
+	while (*temp2 != '\0')
 	{
-		s++;
-		i++;
+		counter2 += 1;
+		temp2 += 1;
 	}
-
-	if (*s != c)
+	temp2 = accept;
+	for (i = 0; i < counter1; i++)
 	{
-		return (NULL);
+		for (j = 0; j < counter2; j++)
+		{
+			if (*(s + i) == *(accept + j))
+			{
+				counter++;
+				break;
+			}
+		}
+		if (counter != counter_temp)
+			counter_temp = counter;
+		else
+			break;
 	}
-	else
-	{
-		return (s);
-	}
-
+	return (counter);
 }

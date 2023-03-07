@@ -7,7 +7,7 @@
 
 /**
  * print_chessboard - prints the chessboard.
- * @(*a)[8]: pointer.
+ * @a: pointer.
  * Return: void.
  */
 
