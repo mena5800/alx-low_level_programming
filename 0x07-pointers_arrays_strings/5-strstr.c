@@ -21,6 +21,8 @@ char *_strstr(char *haystack, char *needle)
 	char *temp2 = needle;
 	char *temp3 = haystack;
 
+	if (needle[0] == '\0')
+		return (haystack);
 	while (*temp2 != '\0')
 	{
 		counter2++;
