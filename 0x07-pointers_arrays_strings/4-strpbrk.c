@@ -15,37 +15,19 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int counter = 0;
-	char *m = s;
-	char *temp = accept;
-	int i = 0;
-	int j = 0;
-	char flag = 1;
+	char *temp1 = s;
+	char *temp2 = accept;
 
-	while (*m != '\0')
+	while (*temp1 != '\0')
 	{
-		counter += 1;
-		m += 1;
-	}
-
-	m = s;
-
-	while (i < counter && flag)
-	{
-		while (*m != *temp && j < counter)
+		while (*temp2 != '\0')
 		{
-			j++;
-			temp++;
+			if (*temp1 == *temp2)
+				return (temp1);
+			temp2++;
 		}
-		if (*m == *temp)
-		{
-			return (m);
-		}
-		m++;
-		i++;
-		j = 0;
-		temp = accept;
+		temp2 = accept;
+		temp1++;
 	}
-
 	return (NULL);
 }
