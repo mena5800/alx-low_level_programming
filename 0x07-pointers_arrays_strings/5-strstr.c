@@ -29,9 +29,9 @@ char *_strstr(char *haystack, char *needle)
 	temp2 = needle;
 	while (*temp1 != '\0')
 	{
-		if (*temp1 == *temp2)
+		temp3 = temp1;
+		if (*temp3 == *temp2)
 		{
-			temp3 = temp1;
 			while (*temp2 != '\0' && *temp2 == *temp3)
 			{
 				temp2++;
@@ -45,5 +45,5 @@ char *_strstr(char *haystack, char *needle)
 		temp2 = needle;
 		temp1++;
 	}
-	return (NULL);
+	return ("NULL");
 }
