@@ -15,37 +15,30 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int counter1 = 0;
-	int counter2 = 0;
-	char *temp1 = haystack;
-	char *temp2 = needle;
-	char *temp3 = haystack;
+int i, j;
 
-	if (needle[0] == '\0')
-		return (haystack);
-	while (*temp2 != '\0')
+if (needle[0] == '\0')
+{
+	return (haystack);
+}
+
+for (i = 0; haystack[i] != '\0'; i++)
+{
+	if (haystack[i] == needle[0])
 	{
-		counter2++;
-		temp2++;
-	}
-	temp2 = needle;
-	while (*temp1 != '\0')
-	{
-		temp3 = temp1;
-		if (*temp3 == *temp2)
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			while (*temp2 != '\0' && *temp2 == *temp3)
+			if (haystack[i + j] != needle[j])
 			{
-				temp2++;
-				temp3++;
-				counter1++;
+				break;
 			}
 		}
-		if (counter1 == counter2)
-			return (temp1);
 
-		temp2 = needle;
-		temp1++;
+		if (needle[j] == '\0')
+		{
+			return (haystack + i);
+		}
 	}
-	return ('\0');
+}
+return ('\0');
 }
