@@ -1,27 +1,34 @@
-/*
- * auth: mina safwat samy
- * file: 5-sqrt_recursion.c
- */
-
 #include "main.h"
-
 /**
- * _sqrt_recursion - return the natural square of a number.
- * @n: int num.
- * Return: square root of num.
+ * square_root - find the natural square root
+ * @i: number
+ * @j: incrementor
+ *
+ * Return: the number found
  */
-
+int square_root(int i, int j)
+{
+	if (i * i == j)
+	{
+		return (i);
+	}
+	else if (i * i > j)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (square_root(i + 1, j));
+	}
+}
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: number
+ * Return: the natural square root found
+ */
 int _sqrt_recursion(int n)
 {
-	int i;
+	int a = 1;
 
-	for (i = 0; i <= n; i++)
-	{
-		if (i * i == n)
-			return (i);
-
-		else if (i * i > n)
-			return (-1);
-	}
-return (-1);
+	return (square_root(a, n));
 }
