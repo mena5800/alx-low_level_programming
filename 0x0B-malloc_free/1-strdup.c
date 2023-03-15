@@ -18,6 +18,8 @@ char *_strdup(char *str)
 	int counter = 0;
 	char *pointer = str;
 
+	if (str == NULL)
+		return (NULL);
 	if (*str == '\0')
 		return (NULL);
 
