@@ -18,6 +18,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	char *word;
 
+	if (n == 0)
+	{
+		printf("\n");
+		return;
+	}
+
 	va_start(ar, n);
 	if (separator != NULL)
 	{
