@@ -4,12 +4,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef unsigned int size_t;
+typedef unsigned long int size_t;
+
+/**
+ * struct Node - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ */
 typedef struct Node
 {
 	char *str;
 	unsigned int len;
-	struct Node* next;
+	struct Node *next;
 } list_t;
 
 size_t print_list(const list_t *h);
