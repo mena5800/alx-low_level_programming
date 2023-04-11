@@ -32,7 +32,7 @@ for (i = 0; i < counter; i++)
 {
 	num /= 2;
 	if (b[i] == '0')
-
+		continue;
 	else if (b[i] == '1')
 	{
 	result += num;
