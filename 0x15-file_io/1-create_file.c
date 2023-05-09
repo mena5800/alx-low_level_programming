@@ -6,6 +6,8 @@
  * @text_content: the text should be in file
  * Return: 1 on success -1 in fail
 */
+
+
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
@@ -25,7 +27,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		len = strlen(text_content);
+		len = _strlen(text_content);
 		bytes_written = write(fd, text_content, len);
 		if (bytes_written != len)
 		{
@@ -33,6 +35,25 @@ int create_file(const char *filename, char *text_content)
 			return (-1);
 		}
 	}
+
 	close(fd);
 	return (1);
+}
+
+/**
+ * _strlen - get the length of string
+ * @text: the string
+ * Return: length of string
+*/
+
+int _strlen(char *text)
+{
+	int counter = 0;
+
+	while (*text != '\0')
+	{
+		counter++;
+	}
+	return (counter);
+
 }
