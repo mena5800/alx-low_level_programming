@@ -5,7 +5,7 @@
  * @head: the head node of double linked list.
  * @n: the value of new node.
  * Return: new head
-*/
+ */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *node;
